@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --main-color: #20222f;
+  --secondary-color: #01ecff;
+  --secondary-light-color: #01eeffb4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    margin: -18px 0px;
+  }
+}

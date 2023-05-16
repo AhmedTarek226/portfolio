@@ -1,0 +1,202 @@
+/* @import('app'); */
+* {
+  transition: all 0.2s linear;
+}
+header {
+  background-color: var(--main-color);
+  margin: 0;
+  padding: 25px 3rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  /* padding-bottom: 14px; */
+  /* padding: 25px 0; */
+}
+
+h3 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  margin: 0;
+}
+
+li {
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  /* padding: 24px 0; */
+  margin-top: -15px;
+  box-shadow: 0px 0px 15px 1px var(--secondary-color);
+}
+
+li a {
+  padding: 0 1em;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+li a:hover {
+  background-color: var(--secondary-color);
+  transition: 2s;
+}
+
+.menu-btn {
+  display: none;
+}
+
+button i {
+  height: 100%;
+  font-size: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+button {
+  height: 35px;
+  width: 55px;
+  position: relative;
+  /* padding: 10px 20px; */
+  border-radius: 7px;
+  border: 1px solid var(--secondary-color);
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--secondary-color);
+  box-shadow: 0 0 30px 5px var(--secondary-color);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+@media screen and (max-width: 900px) {
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  header {
+    padding: 0 0.5rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .menu-btn {
+    display: block;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  ul {
+    display: none;
+  }
+
+  li {
+    box-shadow: none;
+  }
+}
+
+.showLinks {
+  list-style: none;
+  display: flex;
+  height: 200px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 55px;
+  left: 0;
+  padding: 11px 0;
+  border: 1px solid white;
+  border-radius: 6%;
+  box-shadow: 0px 5px 25px var(--secondary-color);
+}

@@ -1,0 +1,24 @@
+<header>
+  <h3>Portfolio.</h3>
+  <button class="menu-btn" (click)="toggleShowLinks()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <ul [ngClass]="isShowLinks ? 'showLinks' : 'nn'">
+    <li>
+      <a> About </a>
+    </li>
+    <li>
+      <a> Skills </a>
+    </li>
+    <li>
+      <a> Projects </a>
+    </li>
+    <li>
+      <a> Education </a>
+    </li>
+    <li>
+      <a> Contact </a>
+    </li>
+  </ul>
+</header>
