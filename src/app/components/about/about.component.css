@@ -361,7 +361,7 @@ h3 {
     var(--secondary-light-color)
   );
   height: 130%;
-  animation: rotBGimg 3s linear infinite;
+  animation: rotBGimg 5s linear infinite;
   transition: all 0.2s linear;
 }
 
